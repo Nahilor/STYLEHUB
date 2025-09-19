@@ -1,5 +1,5 @@
 # Project Description 
-An modern full-stack modern E-commerce website that allows the user to shop for products online and make purchases. It will have categories for men, women, electronics, and home. The overall Page structure should be like this: 
+Style Hub is a modern full-stack modern E-commerce website that allows the user to shop for products online and make purchases. It will have categories for men, women, electronics, and home. The overall Page structure should be like this: 
 
 # Tech Stack
 - HTML, CSS, Javascript, Node/Express.js, PostgreSQL, Bootstrap
