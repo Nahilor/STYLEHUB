@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .returns-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .returns-container h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .returns-container h2 {
+            color: var(--dark-color);
+            margin: 30px 0 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .step-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .policy-card {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container py-2">
+            <div class="col-auto">
+                <a href="/login" class="text-decoration-none">
+                    <h1 class="h4 mb-0">Style Hub</h1>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="returns-container">
+                    <h1>Returns & Exchanges</h1>
+                    <p class="lead">We want you to be completely satisfied with your purchase. If you're not, we're here to help.</p>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Extended Holiday Returns:</strong> Items purchased between November 1st and December 31st can be returned until January 31st of the following year.
+                    </div>
+
+                    <h2>Our Return Policy</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="policy-card">
+                                <h3>30-Day Return Window</h3>
+                                <p>You have 30 days from the delivery date to return your item(s) for a full refund or exchange.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="policy-card">
+                                <h3>Free Returns</h3>
+                                <p>We offer free returns on all domestic orders. International returns are subject to shipping fees.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="policy-card">
+                                <h3>Full Refund</h3>
+                                <p>Receive a full refund to your original payment method. Processing may take 5-7 business days.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>How to Return an Item</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="step-card">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="step-number">1</span>
+                                    <h3 class="h5 mb-0">Start Your Return</h3>
+                                </div>
+                                <p>Log in to your account and go to Order History. Select the item(s) you'd like to return and follow the prompts.</p>
+                                <a href="/login" class="btn btn-sm btn-outline-primary">Start Return</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="step-card">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="step-number">2</span>
+                                    <h3 class="h5 mb-0">Pack & Ship</h3>
+                                </div>
+                                <p>Pack your return using the original packaging if possible. Include the return label and place it securely on the package.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="step-card">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="step-number">3</span>
+                                    <h3 class="h5 mb-0">Track & Receive</h3>
+                                </div>
+                                <p>Drop off your package at any authorized shipping location. You'll receive an email when we process your return.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Return Conditions</h2>
+                    <div class="row">
+                        <div class="col-md-6
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="h5">Items must be:</h3>
+                                    <ul>
+                                        <li>In original condition with all tags attached</li>
+                                        <li>Unworn, unwashed, and free of stains or odors</li>
+                                        <li>In the original packaging with all accessories included</li>
+                                        <li>Accompanied by the original receipt or order number</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="h5">Non-returnable items:</h3>
+                                    <ul>
+                                        <li>Final sale items (marked as such on the product page)</li>
+                                        <li>Gift cards and e-gift cards</li>
+                                        <li>Personalized or customized items</li>
+                                        <li>Items damaged due to wear and tear</li>
+                                        <li>Items without original packaging or tags</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Exchanges</h2>
+                    <p>We currently don't offer direct exchanges. To exchange an item, please return the original item for a refund and place a new order for the desired item. This ensures you receive your new item as quickly as possible.</p>
+                    
+                    <h2>International Returns</h2>
+                    <p>International customers are responsible for return shipping costs and any applicable customs fees. We recommend using a trackable shipping method and purchasing shipping insurance, as we cannot be responsible for lost or damaged return packages.</p>
+                    
+                    <h2>Damaged or Defective Items</h2>
+                    <p>If you receive a damaged or defective item, please contact our Customer Service team within 7 days of delivery. We'll provide a prepaid return label and process a replacement or refund as soon as possible.</p>
+                    <a href="/service" class="btn btn-primary">Contact Customer Service</a>
+                    
+                    <h2 class="mt-5">Still Have Questions?</h2>
+                    <p>Check out our <a href="/faq">FAQs</a> or contact our Customer Service team for assistance with your return or exchange.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+   <footer class="bg-light py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="mb-3">Style Hub</h5>
+                <p>Your one-stop destination for the latest fashion and electronics. Quality products at affordable prices.</p>
+                <div class="social-links">
+                    <a href="facebook.com" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="twitter.com" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="instagram.com" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h6>Shop</h6>
+                <ul class="list-unstyled">
+                    <li><a href="Categories/Men.html" class="text-muted text-decoration-none">Men's Fashion</a></li>
+                    <li><a href="Categories/Women.html" class="text-muted text-decoration-none">Women's Fashion</a></li>
+                    <li><a href="Categories/Electronics.html" class="text-muted text-decoration-none">Electronics</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h6>Help</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/about" class="text-muted text-decoration-none">About us</a></li>
+                    <li><a href="/service" class="text-muted text-decoration-none">Customer Service</a></li>
+                    <li><a href="/returns" class="text-muted text-decoration-none">Returns & Exchanges</a></li>
+                    <li><a href="/faq" class="text-muted text-decoration-none">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 ms-lg-auto">
+                <div class="ms-lg-4">
+                    <h6>Newsletter</h6>
+                    <p class="text-muted">Subscribe for updates and offers</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <div class="row mt-4 pt-3 border-top">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-muted">&copy; 2025 Style Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
