@@ -50,8 +50,9 @@ app.get('/service', (req, res) => {
     res.sendFile(path.join(__dirname, 'view', 'customer-service.html'));
 })
 
-const authservices = require("./src/services/authService");
-let a = authservices.register("Kidus", "kidus@gmail.com", "kid");
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, 'view', 'profile.html'));
+})
 
 
 // listening for requests on the port specified
