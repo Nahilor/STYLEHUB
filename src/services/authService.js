@@ -1,6 +1,5 @@
 const { createUser } = require('../models/userModel.js');
 const { getUserByEmail } = require('../models/userModel.js');
-const {loginController} = require("../controllers/authController");
 
 class Response {
     constructor(object=null, message='') {
@@ -28,14 +27,11 @@ const register = async (fname, email, password) => {
     let user = await getUserByEmail(email);
     if (!user) {
         let newUser = await createUser(fname, email, password);
-        console.log(newUser.fname);
         return new Response(newUser, 'User created successfully');
     } else {
         console.error('user already exist');
         return new Response(null, 'User already registered');
     }
-
-
 }
 
 module.exports = { login , register };

@@ -14,46 +14,57 @@ app.use(express.static(path.join(__dirname, 'public'), {
 }));
 
 const authroutes = require('./src/routes/authRoutes.js');
-app.use(authroutes);
+const {requireAuth} = require("./src/middlewares/authMiddleware");
 app.use('/auth', authroutes);
 
 
 // Routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'landing.html'));
+    res.sendFile(path.join(__dirname, 'public', 'html', 'landing.html'));
 });
 
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'home.html'));
-})
+app.get('/home', requireAuth, (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html' ,'home.html'));
+});
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'login.html'));
-})
+    res.sendFile(path.join(__dirname, 'public', 'html', 'login.html'));
+});
 
 app.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'signup.html'));
-})
+    res.sendFile(path.join(__dirname, 'public', 'html' , 'signup.html'));
+});
 
 app.get('/faq', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'faq.html'));
-})
+    res.sendFile(path.join(__dirname, 'public', 'html', 'faq.html'));
+});
 
 app.get('/returns', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'returns.html'));
-})
+    res.sendFile(path.join(__dirname, 'public', 'html', 'returns.html'));
+});
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'about.html'));
-})
+    res.sendFile(path.join(__dirname, 'public', 'html', 'about.html'));
+});
 app.get('/service', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'customer-service.html'));
-})
+    res.sendFile(path.join(__dirname, 'public', 'html' , 'customer-service.html'));
+});
 
-app.get('/profile', (req, res) => {
-    res.sendFile(path.join(__dirname, 'view', 'profile.html'));
-})
+app.get('/profile', requireAuth, (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'profile.html'));
+});
 
+app.get('/categories/men', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'category' , 'Men.html'));
+});
+
+app.get('/categories/women', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'category' , 'Women.html'));
+});
+
+app.get('/categories/electronics', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'category' , 'Electronics.html'));
+});
 
 // listening for requests on the port specified
 app.listen(port, host, () => {

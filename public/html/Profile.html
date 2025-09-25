@@ -146,11 +146,11 @@
                                 <i class="fas fa-user"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-menu">
-                                <li><a class="dropdown-item" href="Profile.html"><i class="fas fa-user me-2"></i>My Account</a></li>
+                                <li><a class="dropdown-item" href="/profile"><i class="fas fa-user me-2"></i>My Account</a></li>
                                 <li><a class="dropdown-item" href="Orders.html"><i class="fas fa-box me-2"></i>Orders</a></li>
                                 <li><a class="dropdown-item" href="Wishlist.html"><i class="fas fa-heart me-2"></i>Wishlist</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-danger" href="Auth/login.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                                <li><a id="logoutbtn" class="dropdown-item text-danger" href="/login"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -181,9 +181,9 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../../../OneDrive/文档/Dev/segni/Web-Final-Project/Front-end/Categories/Men.html">Men's Fashion</a></li>
-                            <li><a class="dropdown-item" href="../../../OneDrive/文档/Dev/segni/Web-Final-Project/Front-end/Categories/Women.html">Women's Fashion</a></li>
-                            <li><a class="dropdown-item" href="../../../OneDrive/文档/Dev/segni/Web-Final-Project/Front-end/Categories/Electronics.html">Electronics</a></li>
+                            <li><a class="dropdown-item" href="/categories/men">Men's Fashion</a></li>
+                            <li><a class="dropdown-item" href="/categories/women">Women's Fashion</a></li>
+                            <li><a class="dropdown-item" href="/categories/electronics">Electronics</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -269,7 +269,7 @@
                                 <span><i class="fas fa-credit-card me-2"></i> Payment Methods</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center text-danger">
+                            <a href="/auth/logout" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center text-danger">
                                 <span><i class="fas fa-sign-out-alt me-2"></i> Logout</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
@@ -296,9 +296,9 @@
             <div class="col-lg-2 col-md-4">
                 <h6>Shop</h6>
                 <ul class="list-unstyled">
-                    <li><a href="../../../OneDrive/文档/Dev/segni/Web-Final-Project/Front-end/Categories/Men.html" class="text-muted text-decoration-none">Men's Fashion</a></li>
-                    <li><a href="../../../OneDrive/文档/Dev/segni/Web-Final-Project/Front-end/Categories/Women.html" class="text-muted text-decoration-none">Women's Fashion</a></li>
-                    <li><a href="../../../OneDrive/文档/Dev/segni/Web-Final-Project/Front-end/Categories/Electronics.html" class="text-muted text-decoration-none">Electronics</a></li>
+                    <li><a href="/categories/men" class="text-muted text-decoration-none">Men's Fashion</a></li>
+                    <li><a href="/categories/women" class="text-muted text-decoration-none">Women's Fashion</a></li>
+                    <li><a href="/categories/Electronics" class="text-muted text-decoration-none">Electronics</a></li>
                 </ul>
             </div>
             <div class="col-lg-2 col-md-4">
@@ -334,6 +334,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="/js/logout_script.js"></script>
 </body>
 </html>

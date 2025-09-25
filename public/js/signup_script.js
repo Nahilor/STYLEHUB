@@ -9,11 +9,11 @@ document.getElementById("signupBtn").addEventListener("click", async (e) => {
 
     if (password !== password2) {
         alert("Passwords don't match");
-        return; // stop execution
+        return;
     }
 
     try {
-        const response = await fetch(`http://192.168.1.5:3000/auth/signup`, {
+        const response = await fetch(`${window.location.origin}/auth/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

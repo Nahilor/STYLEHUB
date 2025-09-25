@@ -1,4 +1,6 @@
 const { login, register } = require('../services/authService');
+const { createSession, deleteSession } = require("../services/sessionStore");
+
 
 const loginController = async (req, res) => {
     try {
@@ -9,6 +11,10 @@ const loginController = async (req, res) => {
             return res.status(401).json({ message: result.message });
         }
 
+        const sessionId = createSession(email);
+        console.log(`sessionId: ${sessionId}`);
+
+        res.setHeader("Set-Cookie", `sessionId=${sessionId}; HttpOnly; Path=/`);
         res.json(result);
     } catch (error) {
         console.error('Login error:', error);
@@ -32,4 +38,17 @@ const signupController = async (req, res) => {
     }
 }
 
-module.exports = { loginController, signupController };
+const logoutController = (req, res) => {
+    const cookies = req.headers.cookie?.split(';').reduce((acc, c) => {
+        const [k, v] = c.trim().split('=');
+        acc[k] = v;
+        return acc;
+    }, {});
+
+    if (cookies?.sessionId) {
+        deleteSession(cookies.sessionId);
+    }
+    res.json({ message: "Logged out" });
+};
+
+module.exports = { loginController, signupController , logoutController };
