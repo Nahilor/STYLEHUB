@@ -15,7 +15,6 @@ function requireAuth(req, res, next) {
 
     if (!session) return res.status(401).send("Not authorized");
 
-    // Attach user info to request
     req.user = session.userId;
     next();
 }
